@@ -21,14 +21,7 @@ var allFeeds = [
         name: 'Linear Digressions',
         url: 'http://feeds.feedburner.com/udacity-linear-digressions'
     },
-	{
-        name: 'mytest for empty url',
-        url: 'xx'
-    },
-		{
-        name: 'xx',
-        url: 'my test for empty name'
-    }
+
 ];
 
 /* This function starts up our application. The Google Feed
@@ -37,7 +30,7 @@ var allFeeds = [
  */
 function init() {
     // Load the first feed we've defined (index of 0).
-    loadFeed(2);
+    loadFeed(1);
 }
 
 /* This function performs everything necessary to load a
