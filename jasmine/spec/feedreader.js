@@ -39,35 +39,35 @@ $(function() {
     });
 
     describe('Initial Entries', function() {
-        var feedOne;
+        var $feedOne;
         beforeEach(function(done) {
             $('.feed').empty();
             loadFeed(1, function() {
-                feedOne = $('.feed').find("h2").text();
+                $feedOne = $('.feed').find("h2").text();
                 done();
             });
         });
         it('When loadfeed completes should be atleast 1 entry', function() {
-            expect(feedOne.length).not.toEqual(0);
+            expect($feedOne.length).not.toEqual(0);
         });
     });
 
     describe('New Feed Selection', function() {
-        var feedOne, feedTwo;
+        var $feedOne, $feedTwo;
         beforeEach(function(done) {
             loadFeed(1, function() {
-                feedOne = $('.feed').find("h2").text();
+                $feedOne = $('.feed').find("h2").text();
                 done();
             });
         });
         beforeEach(function(done) {
             loadFeed(2, function() {
-                feedTwo = $('.feed').find("h2").text();
+                $feedTwo = $('.feed').find("h2").text();
                 done();
             });
         });
         it('New feed content changes', function() {
-            expect(feedOne).not.toEqual(feedTwo);
+            expect($feedOne).not.toEqual($feedTwo);
         });
     });
 }());
